@@ -6,6 +6,7 @@ class Router
 {
 
    Private Static $route_list;
+   
    //  // Private Static $_URI;
    //  public static function GetUri(){
    //    $script_name = mb_strtolower($_SERVER['SCRIPT_NAME']);
@@ -24,6 +25,7 @@ class Router
       $link = rtrim($link,'/');
       self::$route_list[$link] = [$dat[0],$dat[1]];
     }
+
     public static function RenderRoutes()
     {
 

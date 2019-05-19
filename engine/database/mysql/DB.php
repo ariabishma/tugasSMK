@@ -1,10 +1,15 @@
 <?php
+
+/**
+* database engine for communicate our models into mysql
+*/
 class DB
 {
 	public $obj;
 	public $query;
 	public $table_name;
 	public $conn;
+	public $q;
 	
 	function __construct($obj)
 	{
@@ -62,8 +67,29 @@ class DB
 	}	
 
 
+
+	public function GetALL()
+	{	
+		$table_name = $this->table_name;
+		$q = mysqli_query($this->conn,"SELECT * FROM $table_name");
+		
+		$i =0;
+		while ($r=mysqli_fetch_array($q)) {
+			$res[$i] = new $this->obj;
+			foreach ($this->obj as $key => $value) {
+				$res[$i]->$key = $r[$key];
+			}
+			$i++; 
+		}
+		
+		return $res;
+	}
+
+
 	public function Execute()
 	{
-		echo $this->query;
+		$this->q = mysqli_query($this->conn,$this->query);
+		
+		return $this;
 	}
 }

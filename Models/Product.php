@@ -20,8 +20,8 @@ class Product
 	// 	$this->name = "bishma";
 	// 	$this->price = 20000;
 	// 	$this->stock = 10;
-	// 	$this->category = "bishma";
-	// 	$this->isfavorite = true;
+	// 	$this->category = 1;
+	// 	$this->isfavorite = 1;
 		
 	// }
 

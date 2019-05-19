@@ -2,24 +2,32 @@
 require 'Product_Interface.php';
 require BASEPATH.'/Models/Product.php';
 /**
- * 
+ *  
  */
 class ProductController implements Product_Interface
 {
 
-	public $state
+	public $state;
+	// public $db;
+
+	// function __construct()
+	// {
+	// 	$this->db = new DB();
+	// }
 
 	public function index()
 	{
 		$bsm = new BSM();
-		$bsm->Render('home',['data'=>'nama saya bishma']);
+		$all = $this->getAllProduct();
+		$bsm->Render('home',['data'=>$all]);
 	}
 
 
 	public function manipulate(Product $prod , $state)
 	{
 		$this->state = $state;
-		
+		$db = new DB();
+
 	}
 	
 	public function insert(Product $prod){
@@ -37,6 +45,9 @@ class ProductController implements Product_Interface
 	public function getAllProduct(){
 		$prod = new Product();
 
+		$db = new DB($prod);
+		$r = $db->GetAll();
+		return $r;
 	}
 
 	public function getById($cat){

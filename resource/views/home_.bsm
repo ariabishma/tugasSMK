@@ -23,31 +23,25 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
-				      <th scope="row">1</th>
-				      <td>Baygon</td>
+				  	<?php
+				  		foreach($data as $key => $value){
+			  		?>
+
+					<tr>
+				      <th scope="row">{{$value->id}}</th>
+				      <td>{{$value->name}}</td>
 				      <td>Rp.200,000</td>
-				      <td>30</td>
-				      <td>Makanan</td>
-				      <td>true</td>
+				      <td>{{$value->stock}}</td>
+				      <td>{{$value->category}}</td>
+				      <td>{{$value->isfavorite}}</td>
 				    </tr>
-				     <tr>
-				      <th scope="row">1</th>
-				      <td>Baygon</td>
-				      <td>Rp.200,000</td>
-				      <td>30</td>
-				      <td>Makanan</td>
-				      <td>true</td>
-				    </tr>
-				     <tr>
-				      <th scope="row">1</th>
-				      <td>Baygon</td>
-				      <td>Rp.200,000</td>
-				      <td>30</td>
-				      <td>Makanan</td>
-				      <td>true</td>
-				    </tr>
+			  		<?php
+				  		}
+				  	?>
+				
+				     
 				  </tbody>
+
 				</table>
 				<hr>
 				<button class="btn btn-outline-secondary">Show Category</button>

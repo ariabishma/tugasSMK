@@ -20,10 +20,15 @@ Router::RenderRoutes();
 // print_r($prd);
 
 // $prod = new Product();
+// // $prd = (array) $prod;
 
+// // print_r($prd);
 
 // $db = new DB($prod);
-// $db->UpdateDAO()->Execute();
+// // 
+// $r = $db->GetAll();
+
+// echo $r[0]->getName();
 
 
 
