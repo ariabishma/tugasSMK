@@ -4,6 +4,9 @@
 	<title></title>
 </head>
 <body>
+	@comp("head")
+	<h1>hello {{$nama}} </h1>
+	
 
 </body>
 </html>

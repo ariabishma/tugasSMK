@@ -26,8 +26,6 @@ class Product
 	}
 
 
-
-
 	//setters
 
 	public function setId($id)
