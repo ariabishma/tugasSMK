@@ -1,9 +1,9 @@
 <?php
 interface Product_Interface
 {
-	public function insert(Category $c);
-	public function update(Category $c);
-	public function delete(Category $c);
+	public function insert(Product $prod);
+	public function update(Product $prod);
+	public function delete(Product $prod);
 	public function getAllProduct();
 	public function getById($cat);
 	public function getByName($name);

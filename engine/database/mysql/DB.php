@@ -1,14 +1,14 @@
 <?php
-
-
 class DB
 {
 	public $obj;
 	public $query;
 	public $table_name;
+	public $conn;
 	
 	function __construct($obj)
 	{
+		$this->conn = new mysqli("localhost","root","","tugas_oop");
 		$this->obj = $obj;
 		$this->table_name = strtolower(get_class($this->obj));
 	}
@@ -66,7 +66,4 @@ class DB
 	{
 		echo $this->query;
 	}
-
-
-
 }

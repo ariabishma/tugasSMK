@@ -14,16 +14,16 @@ class Product
 	public $isfavorite;
 
 
-	function __construct()
-	{
-		$this->id = 1;
-		$this->name = "bishma";
-		$this->price = 20000;
-		$this->stock = 10;
-		$this->category = "bishma";
-		$this->isfavorite = true;
+	// function __construct()
+	// {
+	// 	$this->id = 1;
+	// 	$this->name = "bishma";
+	// 	$this->price = 20000;
+	// 	$this->stock = 10;
+	// 	$this->category = "bishma";
+	// 	$this->isfavorite = true;
 		
-	}
+	// }
 
 
 	//setters

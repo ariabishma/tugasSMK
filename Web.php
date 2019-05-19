@@ -1,2 +1,3 @@
 <?php
-	Router::get('/','TesController@index');
+	Router::get('/','ProductController@index');
+	Router::get('/addproduct','TesController@index1');

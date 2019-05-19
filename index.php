@@ -12,6 +12,7 @@
 define('BASEPATH',__DIR__);
 
 require './Bootstrap.php';
+// header('location:/oop/index.php/');
 
 Router::RenderRoutes();
 

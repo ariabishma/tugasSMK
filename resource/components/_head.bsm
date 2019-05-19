@@ -1,2 +1,5 @@
-<!DOCTYPE html>
-this is head <?php echo $nama;?>
+<nav class="navbar navbar-expand bg-dark">
+	<div class="container">
+		<a class="navbar-brand text-white">Tugas OOP</a>
+	</div>
+</nav>
