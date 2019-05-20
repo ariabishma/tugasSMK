@@ -16,4 +16,11 @@ class TesController
 		$bsm->Render('addproduct',['nama'=>"bishma"]);
 	}
 
+
+	public function about()
+	{
+		$bsm = new BSM();
+		$bsm->Render('about',[]);
+	}
+
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas OOP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	@comp("head")
+	<div class="container mt-3">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<h3 class="m-0 p-0 text-center">About This Project</h3>
+				<hr class="my-3">
+				<p>
+					Nama : mochammad aria bishma fauzan,<br>
+					Kelas : XI RPL 1<br>
+					SMKN 1 TALAGA
+				</p>
+			</div>	
+		</div>
+	</div>
+
+</body>
+</html>

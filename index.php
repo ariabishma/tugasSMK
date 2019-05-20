@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 /**
 * Tugas Pemrograman Berorientasi object SMKN 1 TALAGA
 * @Author mochammad aria bishma fauzan

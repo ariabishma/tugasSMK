@@ -9,17 +9,13 @@
 	<div class="container mt-3">
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<h3 class="m-0 p-0">Product Data</h3>
+				<h3 class="m-0 p-0">Category Data</h3>
 				<hr class="my-3">
 				<table class="table">
 				  <thead>
 				    <tr>
 				      <th scope="col">id</th>
 				      <th scope="col">Name</th>
-				      <th scope="col">Price</th>
-				      <th scope="col">Stock</th>
-				      <th scope="col">Category</th>
-				      <th scope="col">IsFavorite</th>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -30,12 +26,9 @@
 			  		
 					<tr>
 				      <th scope="row">{{$value->id}}</th>
-				      <td><a href="<?php echo route('editproduct?id='.$value->id); ?>">{{$value->name}}</a></td>
-				      <td>Rp{{number_format($value->price)}}</td>
-				      <td>{{$value->stock}}</td>
-				      <td>{{$value->category}}</td>
-				      <td>{{$value->isfavorite}}</td>
-				      <td><a href="<?php echo route('deleteproduct?id='.$value->id); ?>">
+				      <td><a href="<?php echo route('editcategory?id='.$value->id); ?>">{{$value->name}}</a></td>
+				    
+				      <td><a href="<?php echo route('deletecategory?id='.$value->id); ?>">
 				      	<button class="btn btn-danger btn-sm">Delete</button>
 				      </a></td>
 				    </tr>
@@ -49,8 +42,8 @@
 
 				</table>
 				<hr>
-				<a href="<?php echo route('category'); ?>"><button class="btn btn-outline-secondary">Show Category</button></a>
-				<a href="<?php echo route('addproduct'); ?>"><button class="btn btn-primary float-right">Add Product</button></a>
+				<a href="<?php echo route(''); ?>"><button class="btn btn-outline-secondary">Show Product</button></a>
+				<a href="<?php echo route('addcategory'); ?>"><button class="btn btn-primary float-right">Add Category</button></a>
 			</div>	
 		</div>
 	</div>
