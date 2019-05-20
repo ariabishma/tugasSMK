@@ -9,7 +9,7 @@
 		</ul>
 		
 		<ul class="navbar-nav">
-			<li class="nav-link text-white">About This Project</li>
+			<a href="<?php echo route('about'); ?>"><li class="nav-link text-white">About This Project</li></a>
 		</ul>
 	</div>
 </nav>
