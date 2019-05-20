@@ -24,28 +24,33 @@
 				  </thead>
 				  <tbody>
 				  	<?php
+
 				  		foreach($data as $key => $value){
 			  		?>
-
+			  		
 					<tr>
 				      <th scope="row">{{$value->id}}</th>
-				      <td>{{$value->name}}</td>
-				      <td>Rp.200,000</td>
+				      <td><a href="<?php echo route('editproduct?id='.$value->id); ?>">{{$value->name}}</a></td>
+				      <td>Rp{{number_format($value->price)}}</td>
 				      <td>{{$value->stock}}</td>
 				      <td>{{$value->category}}</td>
 				      <td>{{$value->isfavorite}}</td>
+				      <td><a href="<?php echo route('deleteproduct?id='.$value->id); ?>">
+				      	<button class="btn btn-danger btn-sm">Delete</button>
+				      </a></td>
 				    </tr>
+
 			  		<?php
 				  		}
 				  	?>
-				
+					
 				     
 				  </tbody>
 
 				</table>
 				<hr>
 				<button class="btn btn-outline-secondary">Show Category</button>
-				<button class="btn btn-primary float-right">Add Product</button>
+				<a href="<?php echo route('addproduct'); ?>"><button class="btn btn-primary float-right">Add Product</button></a>
 			</div>	
 		</div>
 	</div>

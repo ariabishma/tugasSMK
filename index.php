@@ -1,5 +1,5 @@
 <?php
-
+// error_reporting(0);
 /**
 * Tugas Pemrograman Berorientasi object SMKN 1 TALAGA
 * @Author mochammad aria bishma fauzan
@@ -10,6 +10,11 @@
 
 //inisialisasi base url 
 define('BASEPATH',__DIR__);
+
+function route($route)
+{
+	return "http://".$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME']."/".$route;
+}
 
 require './Bootstrap.php';
 // header('location:/oop/index.php/');

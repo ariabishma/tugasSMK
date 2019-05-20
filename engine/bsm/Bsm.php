@@ -1,6 +1,7 @@
 <?php
 /**
- * templating engine core
+ * bsm templating engine core
+ * @Author mochammad aria bishma fauzan 
  */
 class BSM
 {
@@ -9,6 +10,8 @@ class BSM
 	{
 		echo htmlspecialchars($s);
 	}
+
+	
 
 	public function sanitize($templ)
 	{

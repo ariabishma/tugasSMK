@@ -85,6 +85,33 @@ class DB
 		return $res;
 	}
 
+	public function find($id)
+	{	
+		$table_name = $this->table_name;
+		$q = mysqli_query($this->conn,"SELECT * FROM $table_name WHERE id='$id'");
+		$r=mysqli_fetch_array($q);
+	
+		$res[0] = new $this->obj;
+		foreach ($this->obj as $key => $value) {
+			$res[0]->$key = $r[$key];
+		}
+		
+		return $res[0];
+	}
+
+
+	public function delete()
+	{
+		$table_name = $this->table_name;
+		$id= $this->obj->id;
+		$q = mysqli_query($this->conn,"DELETE FROM $table_name WHERE id='$id'");
+		if ($q) {
+			return true;
+		}else{
+			return false;
+		}
+
+	}
 
 	public function Execute()
 	{

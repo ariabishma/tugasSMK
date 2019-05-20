@@ -9,21 +9,20 @@ class Product
 	public $id;
 	public $name;
 	public $price;
-	public $stock;
 	public $category;
 	public $isfavorite;
+	public $stock;
 
 
-	// function __construct()
-	// {
-	// 	$this->id = 1;
-	// 	$this->name = "bishma";
-	// 	$this->price = 20000;
-	// 	$this->stock = 10;
-	// 	$this->category = 1;
-	// 	$this->isfavorite = 1;
-		
-	// }
+	function __construct()
+	{
+		$this->id = null;
+		// $this->name = "bishma";
+		// $this->price = 20000;
+		// $this->stock = 10;
+		// $this->category = 1;
+		// $this->isfavorite = 1;
+	}
 
 
 	//setters

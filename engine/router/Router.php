@@ -23,7 +23,14 @@ class Router
     {
       $dat = explode('@',$data);
       $link = rtrim($link,'/');
-      self::$route_list[$link] = [$dat[0],$dat[1]];
+      self::$route_list[$link] = [$dat[0],$dat[1],'GET'];
+    }
+
+    public static function post($link,$data)
+    {
+      $dat = explode('@',$data);
+      $link = rtrim($link,'/');
+      self::$route_list[$link] = [$dat[0],$dat[1],'POST'];
     }
 
     public static function RenderRoutes()
@@ -39,13 +46,13 @@ class Router
       }
 
       $cont = self::$route_list[$req_uri];
-      if($cont){
+      if($cont && $cont[2] == $_SERVER['REQUEST_METHOD']){
         require BASEPATH."/Controllers/".$cont[0].".php";
         $cls = new $cont[0]();
         $meth =  $cont[1];
         $call = call_user_func(array($cls,$meth));
       }else {
-        echo "404 ERROR";
+        echo "404 ERROR".$_SERVER['REQUEST_METHOD'];
       }
     }
 
