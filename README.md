@@ -1,5 +1,5 @@
 # tugasSMK
-# this app is using bootstap from cdn , connect your computer to the internet for best experience
+# this app is using bootstap from cdn , connect your computer to the internet while running this app
 
 Authored by : mochammad aria bishma fauzan
 
